@@ -1,0 +1,100 @@
+@import '../../views/root.scss';
+
+$icon_size: calc(2rem + 8px);
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &-item {
+    margin: 0.3rem 0;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    background-image: linear-gradient(
+      to right bottom,
+      #56575912,
+      #56575932 65%,
+      #56575918
+    );
+
+    &-body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: stretch;
+    }
+
+    &-logo {
+      width: $icon_size;
+      height: $icon_size;
+      margin-right: .6rem;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: #fffc;
+      display: flex;
+      align-items: center;
+
+      & img {
+        width: $icon_size;
+      }
+    }
+
+    &-detail {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding-bottom: 0.3rem;
+
+      &_jp {
+        display: flex;
+        align-items: baseline;
+        font-weight: 550;
+        font-size: 1.1rem;
+        font-family: var(--ff-jp);
+        color: var(--color-white);
+      }
+
+      &_label {
+        padding: 0.15rem 0.18rem;
+        border: 0.03rem solid;
+        border-radius: 0.08rem;
+        margin-left: 0.8rem;
+        font-size: 0.7rem;
+        font-family: var(--ff-jp);
+        color: var(--color-orange);
+      }
+
+      &_en {
+        font-size: 0.8rem;
+        font-family: var(--ff-en);
+        color: var(--color-grey);
+      }
+    }
+
+    &-location {
+      font-size: 0.8rem;
+      font-family: var(--ff-jp);
+      color: var(--color-white);
+    }
+
+    &-motto {
+      margin: 0.8rem 0 0.3rem;
+
+      & p {
+        font-size: 0.8rem;
+        font-family: var(--ff-jp);
+        color: var(--color-grey);
+        font-style: italic;
+        text-align: end;
+        margin: 0;
+      }
+    }
+  }
+}
